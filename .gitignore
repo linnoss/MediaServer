@@ -1,4 +1,6 @@
 *.pidb
 *.userprefs
+*.suo
 /Build/
+obj/
 
