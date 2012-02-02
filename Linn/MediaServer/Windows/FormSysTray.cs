@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MediaServer
+namespace Linn.MediaServer
 {
     public partial class FormSysTray : Form
     {
@@ -15,7 +15,7 @@ namespace MediaServer
         {
             InitializeComponent();
 
-            iNotifyIcon.Icon = MediaServer.Properties.Resources.SysTrayIcon;
+            iNotifyIcon.Icon = Linn.MediaServer.Properties.Resources.SysTrayIcon;
         }
 
         private void NotifyIconClick(object sender, MouseEventArgs e)

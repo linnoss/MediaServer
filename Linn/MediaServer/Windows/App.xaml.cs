@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace MediaServer
+namespace Linn.MediaServer
 {
     /// <summary>
     /// Interaction logic for App.xaml

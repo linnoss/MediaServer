@@ -1,4 +1,4 @@
-﻿namespace MediaServer
+﻿namespace Linn.MediaServer
 {
     partial class FormSysTray
     {
