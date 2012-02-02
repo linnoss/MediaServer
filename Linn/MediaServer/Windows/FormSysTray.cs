@@ -11,10 +11,11 @@ namespace Linn.MediaServer
 {
     public partial class FormSysTray : Form
     {
-        public FormSysTray()
+        public FormSysTray(Controller aController)
         {
             InitializeComponent();
 
+            iController = aController;
             iNotifyIcon.Icon = Linn.MediaServer.Properties.Resources.SysTrayIcon;
         }
 
@@ -34,6 +35,9 @@ namespace Linn.MediaServer
 
         private void MenuItemOpenMediaServerConfigurationClick(object sender, EventArgs e)
         {
+            iController.OpenConfigurationClicked();
         }
+
+        private Controller iController;
     }
 }
