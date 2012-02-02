@@ -6,7 +6,7 @@
 //
 using MonoMac.Foundation;
 
-namespace MediaServer
+namespace Linn.MediaServer
 {
 	[Register ("AppDelegate")]
 	partial class AppDelegate

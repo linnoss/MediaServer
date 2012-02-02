@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.MediaServer</string>
+	<string>uk.co.linn.MediaServer</string>
 	<key>CFBundleName</key>
 	<string>MediaServer</string>
 	<key>CFBundleVersion</key>
