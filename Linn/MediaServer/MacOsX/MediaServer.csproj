@@ -45,9 +45,18 @@
     <Compile Include="AppDelegate.designer.cs">
       <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfigurationWindow.cs" />
+    <Compile Include="ConfigurationWindowController.cs" />
+    <Compile Include="ConfigurationWindow.designer.cs">
+      <DependentUpon>ConfigurationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Controller.cs">
+      <Link>Controller.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainMenu.xib" />
+    <InterfaceDefinition Include="ConfigurationWindow.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

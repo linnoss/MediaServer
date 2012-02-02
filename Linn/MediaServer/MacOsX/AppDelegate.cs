@@ -6,7 +6,7 @@ using MonoMac.ObjCRuntime;
 
 namespace Linn.MediaServer
 {
-	public partial class AppDelegate : NSApplicationDelegate
+	public partial class AppDelegate : NSApplicationDelegate, IView
 	{
 		public AppDelegate ()
 		{
@@ -24,14 +24,39 @@ namespace Linn.MediaServer
 			iStatusItem.HighlightMode = true;
 			iStatusItem.Menu = StatusMenu;
 			iStatusItem.Image = image;
+			
+			// create the main configuration window
+			iWindow = new ConfigurationWindowController();
+			iWindow.LoadWindow();
+
+			// create the controller for the application
+			iController = new Controller(this);
 		}
 		
 		partial void OpenConfiguration(NSObject aSender)
 		{
-			Console.WriteLine("Open configuration window");
+			iController.OpenConfigurationClicked();
 		}
 
+		void IView.SetUri(string aUri)
+		{
+			iWindow.SetUri(aUri);
+		}
+		
+		void IView.Show()
+		{
+			NSApplication.SharedApplication.ActivateIgnoringOtherApps(true);
+			iWindow.Window.MakeKeyAndOrderFront(this);
+		}
+		
+		bool IView.IsVisible()
+		{
+			return iWindow.Window.IsVisible;
+		}
+		
 		private NSStatusItem iStatusItem;
+		private ConfigurationWindowController iWindow;
+		private Controller iController;
 	}
 }
 
