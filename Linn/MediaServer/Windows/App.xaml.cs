@@ -27,7 +27,6 @@ namespace Linn.MediaServer
 
             // create and show the sys tray icon
             iFormSysTray = new FormSysTray(iController);
-            iFormSysTray.Show();
         }
 
         private void ApplicationExit(object sender, ExitEventArgs e)
