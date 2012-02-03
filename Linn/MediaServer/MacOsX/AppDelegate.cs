@@ -51,7 +51,7 @@ namespace Linn.MediaServer
 		
 		bool IView.IsVisible()
 		{
-			return iWindow.Window.IsVisible;
+			return (iWindow.Window.IsVisible || iWindow.Window.IsMiniaturized);
 		}
 		
 		private NSStatusItem iStatusItem;
